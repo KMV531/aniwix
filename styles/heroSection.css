@@ -1,0 +1,75 @@
+.hero {
+  position: relative;
+  height: 87vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: url("../assets/hero-image.png") no-repeat center center;
+  background-size: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(2, 2, 2, 1) 10%,
+    rgba(2, 2, 2, 0.4) 30%,
+    transparent 100%
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  margin-left: 5%;
+  max-width: 600px;
+  color: white;
+}
+
+.hero-spotlight {
+  color: #faff02;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.hero-description {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.btn-watch {
+  background: #6366f1;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+  width: max-content;
+}
+
+.btn-watch:hover {
+  background: #4f46e5;
+  transform: translateY(-3px);
+}
