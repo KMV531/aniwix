@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AniWix - Animes Page</title>
+    <title>AniWix - Explore All Animes</title>
      <link rel="icon" href="../assets/favicon.png" type="image/png" />
     <link rel="stylesheet" href="../styles/index.css" />
     <link rel="stylesheet" href="../styles/animes.css" />
@@ -114,5 +114,6 @@
     <?php 
       include("../components/footer.php"); 
     ?>
+    <script src="../scripts/index.js"></script>
 </body>
 </html>

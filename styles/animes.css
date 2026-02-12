@@ -10,13 +10,11 @@
   flex-direction: column;
 }
 
-/* Titre à gauche */
 .category-header.align-left {
   align-items: flex-start;
   text-align: left;
 }
 
-/* Titre à droite */
 .category-header.align-right {
   align-items: flex-end;
   text-align: right;
@@ -30,7 +28,7 @@
 }
 
 .category-title span {
-  color: #6366f1; /* Ton indigo */
+  color: #6366f1;
 }
 
 .title-line {
@@ -39,4 +37,59 @@
   background: #6366f1;
   margin-top: 10px;
   border-radius: 2px;
+}
+
+/* ======== SEARCH FUNCTIONALITY ================*/
+#searchResults {
+  position: absolute;
+  top: 100%; /* Juste sous l'input */
+  right: 0;
+  width: 100%;
+  max-width: 400px;
+  background: rgba(20, 20, 20, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  margin-top: 10px;
+  z-index: 1000;
+  overflow: hidden;
+  display: none;
+}
+
+.search-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.search-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.search-item img {
+  width: 40px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.search-item-info h4 {
+  font-size: 0.9rem;
+  color: white;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.search-item-info span {
+  font-size: 0.75rem;
+  color: #888;
 }

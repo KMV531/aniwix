@@ -58,6 +58,5 @@
     <?php 
       include("components/footer.php"); 
     ?>
-  <script src="../scripts/index.js"></script>
   </body>
 </html>
