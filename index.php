@@ -8,8 +8,11 @@
     <link rel="stylesheet" href="../styles/index.css" />
   </head>
   <body>
-    <?php include("components/header.php") ?>
-    <h1>Home</h1>
-    <script type="module" src="../scripts/index.js"></script>
+    <?php 
+      include("components/header.php");
+      include("sections/heroSection.php")
+    ?>
+    
+  <script src="../scripts/index.js"></script>
   </body>
 </html>
