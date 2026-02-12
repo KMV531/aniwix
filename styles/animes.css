@@ -1,0 +1,42 @@
+.category-section {
+  padding: 60px 0;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.category-header {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Titre à gauche */
+.category-header.align-left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* Titre à droite */
+.category-header.align-right {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.category-title {
+  font-size: 2rem;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.category-title span {
+  color: #6366f1; /* Ton indigo */
+}
+
+.title-line {
+  width: 80px;
+  height: 4px;
+  background: #6366f1;
+  margin-top: 10px;
+  border-radius: 2px;
+}
