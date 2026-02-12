@@ -7,6 +7,7 @@
 
     <nav class="nav-links">
         <a href="/" class="link">Home</a>
+        <a href="../pages/about.php" class="link">Watashi</a>
         <a href="../pages/animes.php" class="link">Animes</a>
     </nav>
 
