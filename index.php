@@ -21,14 +21,14 @@
       $res_upcoming = file_get_contents("https://api.jikan.moe/v4/seasons/upcoming?limit=12", false, $context);
       $animes_upcoming = json_decode($res_upcoming, true)['data'] ?? [];
 
-      // 3. RÉCUPÉRATION : MOST POPULAR (All time)
-      $res_popular = file_get_contents("https://api.jikan.moe/v4/top/anime?filter=bypopularity&limit=6", false, $context);
-      $animes_popular = json_decode($res_popular, true)['data'] ?? [];
+      // 3. RÉCUPÉRATION : CLASSICS 
+      $res_classics = file_get_contents("https://api.jikan.moe/v4/top/anime?filter=bypopularity&limit=6", false, $context);
+      $animes_classics = json_decode($res_classics, true)['data'] ?? [];
     ?>
 
     <?php 
       include("components/header.php");
-      include("sections/heroSection.php")
+      include("sections/heroSection.php");
     ?>
 
     <section class="main-content">
@@ -49,13 +49,15 @@
 
         <h2 class="section-heading" style="margin-top: 3rem;">Community Classics</h2>
         <div class="anime-grid">
-            <?php foreach ($animes_popular as $anime): ?>
+            <?php foreach ($animes_classics as $anime): ?>
                 <?php include 'components/anime-card.php'; ?>
             <?php endforeach; ?>
         </div>
       </div>
 </section>
-    
+    <?php 
+      include("components/footer.php"); 
+    ?>
   <script src="../scripts/index.js"></script>
   </body>
 </html>
