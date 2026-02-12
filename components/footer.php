@@ -7,7 +7,7 @@
         <a href="/" class="footer-logo" title="AniWix Logo">
             <img src="../assets/logo.png" alt="AniWix Logo">
         </a>
-        <p class="footer-slogan">La plateforme des vrais fans, par un fan, pour des fans.</p>
+        <p class="footer-slogan">La plateforme des fans, par un fan, pour des fans.</p>
     </div>
 
     <nav class="footer-nav">
