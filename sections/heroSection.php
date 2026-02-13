@@ -15,8 +15,8 @@
         </p>
         
         <div>
-            <a href="../pages/animes.php" class="btn-watch">
-                EXPLORE ANIME
+            <a href="../pages/details.php?id=41467" class="btn-watch">
+                En savoir plus
             </a>
         </div>
     </div>

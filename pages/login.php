@@ -3,28 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AniWix - Register</title>
+    <title>AniWix - Connectez-vous</title>
     <link rel="icon" href="../assets/favicon.png" type="image/png" />
     <link rel="stylesheet" href="../styles/index.css" />
-    <link rel="stylesheet" href="../styles/register.css" />
+    <link rel="stylesheet" href="../styles/login.css" />
 </head>
 <body>
-    <main class="register-main">
+    <main class="login-main">
+        <div class="background-image">
+            <div class="background-blur"></div>
+        </div>
         <form action="">
-            <h1>Creez un compte</h1>
-            <label for="username">Username :</label>
-            <input type="text" name="username" id="username" required>
+            <h1>Connectez-vous</h1>
             <label for="email">Email : </label>
             <input type="email" name="email" id="email" required>
             <label for="password">Mot de passe :</label>
             <input type="password" name="password" id="password" required>
-            <button type="submit">S'inscrire</button>
-            <span>Déjà inscrit ? <a href="../pages/login.php">Connectez-vous ici</a></span>
+            <button type="submit">Se connecter</button>
+            <span>Pas encore inscrit ? <a href="../pages/register.php">Inscrivez-vous ici</a></span>
             <a href="/" class="back-home">< Retour à l'accueil</a>
         </form>
-        <div class="background-image">
-            <div class="background-blur"></div>
-        </div>
     </main>
 </body>
 </html>
