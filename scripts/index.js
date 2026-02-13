@@ -34,16 +34,21 @@ searchInput.addEventListener("input", (e) => {
       animes.forEach((anime) => {
         const div = document.createElement("div");
         div.className = "search-item";
-        div.innerHTML = `
-                <img src="${anime.images.webp.small_image_url}" alt="${anime.title}">
-                <div class="search-item-info">
-                    <h4>${anime.title}</h4>
-                    <span>${anime.type}</span>
-                </div>
-            `;
 
-        div.onclick = () =>
-          (window.location.href = `details.php?id=${anime.mal_id}`);
+        div.setAttribute("data-id", anime.mal_id);
+
+        div.innerHTML = `
+        <img src="${anime.images.webp.small_image_url}" alt="${anime.title}">
+        <div class="search-item-info">
+            <h4>${anime.title}</h4>
+            <span>${anime.type}</span>
+        </div>
+    `;
+
+        div.addEventListener("mousedown", (e) => {
+          window.location.href = `../pages/details.php?id=${anime.mal_id}`;
+        });
+
         searchResults.appendChild(div);
       });
     } catch (error) {
