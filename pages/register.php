@@ -18,6 +18,8 @@
             <input type="email" name="email" id="email" required>
             <label for="password">Mot de passe :</label>
             <input type="password" name="password" id="password" required>
+            <label for="avatar">Ton avatar :</label>
+            <input type="file" name="avatar" id="avatar" accept="image/*">
             <button type="submit">S'inscrire</button>
             <span>Déjà inscrit ? <a href="../pages/login.php">Connectez-vous ici</a></span>
             <a href="/" class="back-home">< Retour à l'accueil</a>
