@@ -13,7 +13,6 @@
                     <input type="text" id="searchInput" placeholder="Rechercher un anime..." autocomplete="off">
                     <div id="searchResults" class="search-results-panel"></div>
                 </div>
-    
             </div>
         </div>
     </section>
