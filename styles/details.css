@@ -62,7 +62,6 @@
   margin-top: 30px;
 }
 
-/* --- Boutons --- */
 .action-buttons {
   display: flex;
   gap: 1rem;
@@ -102,4 +101,64 @@
 .btn-add:hover {
   background: white;
   color: black;
+}
+
+.anime-trailer-section {
+  padding: 60px 0;
+  background: #0f0f0f;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: white;
+  border-left: 4px solid var(--primary-color);
+  padding-left: 15px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  background: #000;
+}
+
+.video-container iframe {
+  position: absolute;
+  inset: 0;
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
+}
+
+/* ============ SIMILAR SECTION ====================*/
+.similar-section {
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 1400px;
+  margin: 60px auto;
+}
+
+.section-header {
+  margin-bottom: 30px;
+  border-left: 4px solid #6366f1;
+  padding-left: 15px;
+}
+
+.section-header h2 {
+  color: white;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.section-header p {
+  color: #888;
+  margin: 5px 0 0;
+}
+
+.anime-grid p {
+  color: #666;
 }

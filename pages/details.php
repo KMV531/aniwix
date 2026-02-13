@@ -38,6 +38,30 @@
         $episodes = $data['episodes'];
         $type = $data['type'];
         $genres = $data['genres'];
+        $trailerUrl = $data['trailer']['embed_url'];
+
+        // Anime similaire
+        $genreId = !empty($data['genres']) ? $data['genres'][0]['mal_id'] : null;
+        $similarAnimes = [];
+
+        if ($genreId) {
+            // Appelle API pour recuperer les animes du même genre
+            $randomOffset = rand(0, 100);
+            $simUrl = "https://api.jikan.moe/v4/anime?genres=$genreId&limit=6&order_by=score&sort=desc&page=$randomOffset";
+           
+            $simRes = file_get_contents($simUrl, false, $context);
+    
+            if ($simRes) {
+                $simData = json_decode($simRes, true)['data'];
+        
+                foreach ($simData as $item) {
+                    // On exclut l'anime qu'on est déjà en train de regarder
+                    if ($item['mal_id'] != $animeId && count($similarAnimes) < 6) {
+                        $similarAnimes[] = $item;
+                    }
+                }
+            }
+        }
     ?>
 
     <main class="anime-details">
@@ -72,6 +96,39 @@
                 </div>
             </div>
         </section>
+        <?php if (!empty($trailerUrl)): ?>
+            <section class="anime-trailer-section">
+                <div class="container">
+                    <h2 class="section-title">Official Trailer</h2>
+                    <div class="video-container">
+                        <iframe 
+                            src="<?php echo $trailerUrl; ?>" 
+                            frameborder="0" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </section>
+        <?php endif; ?>
+
+        <section class="similar-section">
+            <div class="section-header">
+                <h2>Plus comme <?php echo $title; ?></h2>
+            </div>
+
+            <div class="anime-grid">
+                <?php if (!empty($similarAnimes)): ?>
+                     <?php foreach ($similarAnimes as $anime): ?>
+                    <?php include '../components/anime-card.php'; ?>
+                 <?php endforeach; ?>
+                <?php else: ?>
+                    <p>Aucune pépite similaire trouvée pour le moment...</p>
+                <?php endif; ?>
+            </div>
+        </section>
     </main>
+    <?php 
+      include("../components/footer.php"); 
+    ?>
 </body>
 </html>
