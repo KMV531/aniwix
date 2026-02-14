@@ -1,0 +1,13 @@
+# On ignore le fichier de connexion à la base de données
+includes/db.php
+
+# On ignore les dossiers des outils ou dépendances
+node_modules/
+.env
+
+# On ignore les réglages spécifiques à l'éditeur VS Code
+.vscode/
+
+# On ignore aussi les fichiers d'OS (Optionnel mais recommandé)
+.DS_Store
+Thumbs.db
