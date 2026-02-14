@@ -62,3 +62,23 @@ document.addEventListener("click", (e) => {
     searchResults.style.display = "none";
   }
 });
+
+// Attendre que le DOM soit chargé
+document.addEventListener("DOMContentLoaded", () => {
+  const avatarBtn = document.getElementById("avatarBtn");
+  const dropdownMenu = document.getElementById("dropdownMenu");
+
+  if (avatarBtn) {
+    avatarBtn.addEventListener("click", (e) => {
+      e.stopPropagation(); // Empêche le clic de se propager
+      dropdownMenu.classList.toggle("show");
+    });
+  }
+
+  // Fermer le menu si on clique ailleurs sur la page
+  document.addEventListener("click", () => {
+    if (dropdownMenu && dropdownMenu.classList.contains("show")) {
+      dropdownMenu.classList.remove("show");
+    }
+  });
+});

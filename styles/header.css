@@ -108,3 +108,54 @@ a {
   gap: 1rem;
   color: white;
 }
+
+/* Style pour l'avatar */
+.nav-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.nav-avatar:hover {
+  border-color: #faff02; /* Couleur de ton thème */
+}
+
+/* Positionnement du menu déconnexion */
+.avatar-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-content {
+  display: none; /* Caché par défaut */
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 10px;
+  min-width: 120px;
+  z-index: 100;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+.logout-link {
+  color: #ff4757;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+}
+
+.logout-link:hover {
+  text-decoration: underline;
+}

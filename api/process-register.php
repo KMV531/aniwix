@@ -22,7 +22,7 @@
                 $destination = '../uploads/avatars/' . $avatarName;
 
                 if (!move_uploaded_file($_FILES['avatar']['tmp_name'], $destination)) {
-                    $avatarName = 'default_avatar.png'; // Repli si l'upload échoue
+                    $avatarName = 'default_avatar.png';
                 }
             }
         }
@@ -43,7 +43,7 @@
                 exit();
             }
 
-            // 3. Insertion en Base de Données
+            // 3. Insertion en base de données
             $sql = "INSERT INTO users (username, email, password, avatar) VALUES (:username, :email, :password, :avatar)";
             $stmt = $pdo->prepare($sql);
             $stmt->execute([
@@ -58,7 +58,7 @@
             $_SESSION['username'] = $username;
             $_SESSION['avatar'] = $avatarName;
 
-            // Redirection vers la home
+            // Redirection vers le home
             header('Location: ../index.php');
             exit();
 
