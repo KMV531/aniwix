@@ -20,7 +20,7 @@
         <p class="hero-description">
            J'ai créé <strong>Aniwix</strong> par pure passion. Je voulais une interface qui respecte vraiment les œuvres, 
            sans fioritures inutiles. Fan de <strong>Bleach</strong> depuis plus depuis de depuis, je porte 
-           <em>toute l'œuvres</em> dans mon cœur (et oui, c'est une pépitem que dire c'est PEAK, n'en déplaise aux haters). ⚔️ <br>
+           <em>toute l'œuvres</em> dans mon cœur (et oui, c'est une pépite que dire c'est PEAK, n'en déplaise aux haters). ⚔️ <br>
             "Je ne fais rien que je ne sois obligé de faire, et ce que je dois faire, je le fais vite."
         </p>
         

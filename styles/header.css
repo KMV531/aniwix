@@ -109,7 +109,6 @@ a {
   color: white;
 }
 
-/* Style pour l'avatar */
 .nav-avatar {
   width: 32px;
   height: 32px;
@@ -121,10 +120,9 @@ a {
 }
 
 .nav-avatar:hover {
-  border-color: #faff02; /* Couleur de ton thème */
+  border-color: #faff02;
 }
 
-/* Positionnement du menu déconnexion */
 .avatar-dropdown {
   position: relative;
   display: flex;
@@ -132,7 +130,7 @@ a {
 }
 
 .dropdown-content {
-  display: none; /* Caché par défaut */
+  display: none;
   position: absolute;
   top: 100%;
   right: 0;
@@ -147,6 +145,12 @@ a {
 
 .dropdown-content.show {
   display: block;
+}
+
+.dropdown-content .username {
+  color: #faff02;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .logout-link {

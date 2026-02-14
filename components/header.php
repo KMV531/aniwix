@@ -30,6 +30,7 @@
                      alt="Avatar" class="nav-avatar" id="avatarBtn">
                 
                 <div id="dropdownMenu" class="dropdown-content">
+                    <p class="username"><?php echo $_SESSION['username']; ?></p>
                     <a href="../api/logout.php" class="logout-link">Déconnexion</a>
                 </div>
             </div>
