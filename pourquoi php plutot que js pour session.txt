@@ -1,0 +1,8 @@
+Pourquoi c'est un bon choix stratégique pour Aniwix ?
+En restant sur PHP pour les sessions, tu gardes une homogénéité totale dans ton projet. C'est exactement comme pour l'appel API Jikan qu'on a basculé en PHP pour les recommandations :
+
+Sécurité simplifiée : Pas besoin de gérer le rafraîchissement des tokens (Refresh Tokens) ou de s'inquiéter des failles XSS qui pourraient voler ton localStorage. PHP gère le cookie de session de manière native et sécurisée (HttpOnly).
+
+SEO & Performance : Le serveur sait si l'utilisateur est connecté avant de générer le HTML. Ça veut dire que si tu veux afficher "Ma Liste" dans le header, c'est rendu instantanément, sans que le JS n'ait besoin de faire un "fetch" après le chargement.
+
+Vitesse de dev : On va pouvoir se concentrer sur la logique métier (ajouter un anime en favoris, liker un trailer) plutôt que sur la plomberie technique de l'authentification.

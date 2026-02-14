@@ -13,12 +13,24 @@
         <div class="background-image">
             <div class="background-blur"></div>
         </div>
-        <form action="">
+        <form action="../api/process-login.php" method="POST">
             <h1>Connectez-vous</h1>
+
+            <?php session_start(); ?>
+
+            <?php if(isset($_SESSION['error'])): ?>
+                <p style="color: red;"><?php echo $_SESSION['error']; unset($_SESSION['error']); ?></p>
+            <?php endif; ?>
+
             <label for="email">Email : </label>
-            <input type="email" name="email" id="email" required>
+            <input type="email" name="email" 
+                value="<?php echo $_SESSION['old_email'] ?? ''; unset($_SESSION['old_email']); ?>" 
+                placeholder="Ton email" required
+            >
+
             <label for="password">Mot de passe :</label>
-            <input type="password" name="password" id="password" required>
+            <input type="password" name="password" id="password" placeholder="Ton mot de passe" required>
+
             <button type="submit">Se connecter</button>
             <span>Pas encore inscrit ? <a href="../pages/register.php">Inscrivez-vous ici</a></span>
             <a href="/" class="back-home">< Retour à l'accueil</a>
