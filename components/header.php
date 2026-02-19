@@ -12,6 +12,7 @@
         <a href="/" class="link">Home</a>
         <a href="../pages/about.php" class="link">Watashi</a>
         <a href="../pages/animes.php" class="link">Animes</a>
+        <a href="../pages/random.php" class="link">Random Anime</a>
     </nav>
     <div class="search-container">
         <div class="search-form">

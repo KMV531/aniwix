@@ -58,7 +58,6 @@
             $_SESSION['username'] = $username;
             $_SESSION['avatar'] = $avatarName;
 
-            // Redirection vers le home
             header('Location: ../index.php');
             exit();
 

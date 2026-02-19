@@ -19,7 +19,7 @@ form {
 }
 
 form h1 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin-bottom: 1.5rem;
   color: #6366f1;
 }
@@ -94,8 +94,9 @@ form span {
 .background-image {
   flex: 2;
   position: relative;
-  background: url("../assets/kazuma-gif.gif") no-repeat center;
+  transition: background-image 0.8s ease-in-out;
   background-size: cover;
+  background-position: center;
 }
 
 .background-image::before {
@@ -107,13 +108,6 @@ form span {
   height: 100%;
   background: linear-gradient(to left, #0f0f0f, transparent);
   z-index: 1;
-}
-
-.background-blur {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(5px);
 }
 
 /* ===== MEDIA QUERIES ======= */

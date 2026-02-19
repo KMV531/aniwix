@@ -30,6 +30,12 @@ form label {
   color: #fff;
 }
 
+form .password-info {
+  border: 1px solid #faff02;
+  padding: 0.6rem;
+  border-radius: 4rem;
+}
+
 form input {
   background: #1a1a1a;
   border: 1px solid #333;
@@ -123,5 +129,8 @@ form span {
   }
   form {
     padding: 0 5%;
+  }
+  .back-home {
+    left: 70%;
   }
 }

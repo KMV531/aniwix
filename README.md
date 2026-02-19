@@ -60,9 +60,20 @@ This isn't just a data display; it manages real user states:
    ```bash
       <?php
           $host = 'localhost';
-          $db   = 'aniwix_db';
-          $user = 'your_mysql_user_name';
-          $pass = 'your_mysql_secret_password';
+          $dbname   = 'aniwix_db';
+          $username = 'your_mysql_user_name';
+          $password = 'your_mysql_secret_password';
+
+          try {
+            // Create the connection using PDO (PHP Data Object)
+            $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
+
+            // Show error for easy debugging
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+         } catch (PDOException $e) {
+            die("Erreur de connexion : " . $e->getMessage());
+         }
       ?>
    ```
 

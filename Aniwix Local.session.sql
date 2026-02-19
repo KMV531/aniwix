@@ -1,7 +1,7 @@
 -- 1. Création de la base de données
 CREATE DATABASE IF NOT EXISTS aniwix_db;
 USE aniwix_db;
--- 2. Création de la table users
+-- 2. Create users
 CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL UNIQUE,
@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS users (
     avatar VARCHAR(255) DEFAULT 'default_avatar.png',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE = InnoDB;
-/* 3. Création de la table wishlist */
+--3. Create Wishlist
 CREATE TABLE IF NOT EXISTS wishlist (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,

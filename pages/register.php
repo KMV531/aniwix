@@ -11,7 +11,7 @@
 <body>
     <main class="register-main">
         <form action="../api/process-register.php" method="POST" enctype="multipart/form-data">
-            <h1>Creez un compte</h1>
+            <h1>Bienvenue !</h1>
             <?php session_start(); ?>
     
             <?php if(isset($_SESSION['error'])): ?>
@@ -22,14 +22,19 @@
                     ?>
                 </div>
             <?php endif; ?>
-            <label for="username">Username :</label>
+            <label for="username">Pseudo :</label>
             <input type="text" name="username" id="username" placeholder="Ton nom d'utilisateur" required>
 
-            <label for="email">Email : </label>
-            <input type="email" name="email" id="email" placeholder="Ton email" required>
+            <label for="email">E-mail : </label>
+            <input type="email" name="email" id="email" placeholder="Ton e-mail" required>
 
-            <label for="password">Mot de passe :</label>
+            <label for="password">Mot de passe (mdp) :</label>
             <input type="password" name="password" id="password" placeholder="Ton mot de passe" required>
+
+            <!-- <span class="password-info">Info: Ici, c'est la vieille école : si tu l'oublies, t'es banni. Note-le bien !</span> -->
+            <span class="password-info">Attention ! Note bien ton mdp. Il n'y a pas de récupération ici : si tu le perds, 
+                tu recrées un compte. C’est chiant pour toi, et flemme de le coder pour moi.
+            </span>
 
             <label for="avatar">Ton avatar :</label>
             <input type="file" name="avatar" id="avatar" accept="image/*" required>

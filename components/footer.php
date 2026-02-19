@@ -16,6 +16,7 @@
             <a href="/">Home</a>
             <a href="../pages/about.php">Watashi</a>
             <a href="../pages/animes.php">Animes</a>
+            <a href="../pages/random.php" class="link">Random Anime</a>
             <a href="../pages/legale.php">Confidentialité</a>
         </div>
     </nav>

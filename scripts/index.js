@@ -130,11 +130,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // Après avoir récupéré tes IDs (myFavIds)
   if (myFavIds.length === 0) {
-    document.getElementById("emptyMessage").style.display = "block";
-    document.getElementById("wishlistGrid").style.display = "none";
+    emptyMessage.style.display = "block";
+    grid.style.display = "none";
   } else {
-    document.getElementById("emptyMessage").style.display = "none";
-    document.getElementById("wishlistGrid").style.display = "grid";
+    emptyMessage.style.display = "none";
+    grid.style.display = "grid";
 
     for (const id of myFavIds) {
       try {
