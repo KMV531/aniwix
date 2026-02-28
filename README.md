@@ -65,7 +65,7 @@ This isn't just a data display; it manages real user states:
           $password = 'your_mysql_secret_password';
 
           try {
-            // Create the connection using PDO (PHP Data Object)
+            // Create the connection using PDO (PHP Data Object) method
             $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
 
             // Show error for easy debugging
