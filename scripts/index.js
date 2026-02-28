@@ -28,7 +28,7 @@ searchInput.addEventListener("input", (e) => {
 
       if (animes.length === 0) {
         searchResults.innerHTML =
-          '<div class="no-result">Aucun anime trouvé...</div>';
+          '<div  style="color: #fff; font-size: 14px; font-weight: 500; margin: 10px 0;">Aucun anime trouvé...</div>';
         return;
       }
 
