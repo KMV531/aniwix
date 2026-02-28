@@ -110,6 +110,7 @@
 .info-message p {
   font-size: 1.5rem;
   color: #fff;
+  text-align: center;
 }
 
 .info-message a {
@@ -177,4 +178,10 @@
 
 .anime-grid p {
   color: #666;
+}
+
+@media screen and (max-width: 768px) {
+  .info-message p {
+    font-size: 1rem;
+  }
 }
