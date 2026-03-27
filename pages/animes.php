@@ -18,16 +18,14 @@
         $arrContextOptions = ["ssl" => ["verify_peer" => false, "verify_peer_name" => false]];
         $context = stream_context_create($arrContextOptions);
 
-        // Fonction pour récupérer les animes par genre
         function getAnimesByGenre($genreId, $ctx) {
             $url = "https://api.jikan.moe/v4/anime?genres=$genreId&order_by=score&sort=desc&limit=6";
             $json = file_get_contents($url, false, $ctx);
             return json_decode($json, true)['data'] ?? [];
         }
 
-        // Récupération des données (un petit délai entre chaque peut aider)
         $shonenAnimes = getAnimesByGenre(27, $context);
-        usleep(500000); // 0.2 seconde de pause
+        usleep(500000);
         $shojoAnimes = getAnimesByGenre(25, $context);
         usleep(500000);
         $solAnimes = getAnimesByGenre(36, $context);

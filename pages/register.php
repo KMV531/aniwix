@@ -31,7 +31,6 @@
             <label for="password">Mot de passe (mdp) :</label>
             <input type="password" name="password" id="password" placeholder="Ton mot de passe" required>
 
-            <!-- <span class="password-info">Info: Ici, c'est la vieille école : si tu l'oublies, t'es banni. Note-le bien !</span> -->
             <span class="password-info">Attention ! Note bien ton mdp. Il n'y a pas de récupération ici : si tu le perds, 
                 tu recrées un compte. C’est chiant pour toi, et flemme de le coder pour moi.
             </span>

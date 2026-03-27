@@ -17,7 +17,7 @@
             $ext = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
 
             if (in_array($ext, $allowed)) {
-                // On crée un nom unique pour éviter les doublons (ex: 167584_monimage.png)
+                // Create a unique filename to prevent overwriting and remove any special characters
                 $avatarName = time() . '_' . preg_replace('/[^a-z0-9.]/i', '', $filename);
                 $destination = '../uploads/avatars/' . $avatarName;
 
@@ -43,7 +43,7 @@
                 exit();
             }
 
-            // 3. Insertion en base de données
+            // 3. Insert in the database
             $sql = "INSERT INTO users (username, email, password, avatar) VALUES (:username, :email, :password, :avatar)";
             $stmt = $pdo->prepare($sql);
             $stmt->execute([
@@ -53,7 +53,7 @@
                 'avatar'   => $avatarName
             ]);
 
-            // 4. On connecte l'utilisateur automatiquement après inscription
+            // 4. Connect the user
             $_SESSION['user_id'] = $pdo->lastInsertId();
             $_SESSION['username'] = $username;
             $_SESSION['avatar'] = $avatarName;

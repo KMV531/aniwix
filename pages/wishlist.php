@@ -20,7 +20,6 @@
                 exit();
             }
 
-            // On récupère uniquement les IDs des animes favoris
             $stmt = $pdo->prepare("SELECT anime_id FROM wishlist WHERE user_id = ? ORDER BY added_at DESC");
             $stmt->execute([$_SESSION['user_id']]);
             $favIds = $stmt->fetchAll(PDO::FETCH_COLUMN);

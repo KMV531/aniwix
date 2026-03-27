@@ -18,5 +18,4 @@ CREATE TABLE IF NOT EXISTS wishlist (
     added_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
     UNIQUE(user_id, anime_id)
-    /* Unique so that a user can't add the same anime multiple times */
 );

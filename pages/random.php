@@ -12,14 +12,12 @@
         require_once '../includes/db.php'; 
         session_start();
 
-        // 1. Appel API RANDOM
         $arrContextOptions = ["ssl" => ["verify_peer" => false, "verify_peer_name" => false]];
         $context = stream_context_create($arrContextOptions);
         $response = @file_get_contents("https://api.jikan.moe/v4/random/anime", false, $context);
         $decoded = json_decode($response, true);
         $data = $decoded['data'];
 
-        // 2. On prépare les MÊMES variables
         $animeId = $data['mal_id'];
         $title = $data['title'];
         $synopsis = $data['synopsis'];
@@ -35,7 +33,6 @@
         $similarAnimes = [];
 
         if ($genreId) {
-            // Call to API to get similar animes based on the first genre of the current anime
             $randomOffset = rand(0, 100);
             $simUrl = "https://api.jikan.moe/v4/anime?genres=$genreId&limit=6&order_by=score&sort=desc&page=$randomOffset";
            
@@ -45,7 +42,6 @@
                 $simData = json_decode($simRes, true)['data'];
         
                 foreach ($simData as $item) {
-                    // On exclut l'anime qu'on est déjà en train de regarder
                     if ($item['mal_id'] != $animeId && count($similarAnimes) < 6) {
                         $similarAnimes[] = $item;
                     }

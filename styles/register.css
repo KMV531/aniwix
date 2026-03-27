@@ -6,7 +6,6 @@
   position: relative;
 }
 
-/* --- ===== FORM ======= --- */
 form {
   display: flex;
   flex-direction: column;
@@ -96,11 +95,10 @@ form span {
   transition: color 0.3s;
 }
 
-/* ===== BACKGROUND ======= */
 .background-image {
   flex: 2;
   position: relative;
-  background: url("../assets/photo.jpg") no-repeat center;
+  background: url("../assets/register-anime.jpg") no-repeat center;
   background-size: cover;
 }
 
@@ -118,7 +116,6 @@ form span {
 .background-blur {
   position: absolute;
   inset: 0;
-  backdrop-filter: blur(25px);
   background: rgba(0, 0, 0, 0.2);
 }
 

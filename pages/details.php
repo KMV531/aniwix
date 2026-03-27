@@ -13,7 +13,6 @@
             require_once '../includes/db.php'; 
             session_start();
 
-            // 2. Get the ID de l'anime depuis l'URL
             $animeId = $_GET['id'] ?? null;
             if (!$animeId) {
                 header('Location: index.php');
@@ -34,7 +33,7 @@
             $arrContextOptions = ["ssl" => ["verify_peer" => false, "verify_peer_name" => false]];
             $context = stream_context_create($arrContextOptions);
             $apiUrl = "https://api.jikan.moe/v4/anime/$animeId/full";
-            $response = @file_get_contents($apiUrl, false, $context); // Le @ évite d'afficher l'erreur si l'API est down
+            $response = @file_get_contents($apiUrl, false, $context);
             $decoded = json_decode($response, true);
 
             if (!$decoded || !isset($decoded['data'])) {
@@ -57,7 +56,6 @@
             $similarAnimes = [];
 
             if ($genreId) {
-                // Call to API to get similar animes based on the first genre of the current anime
                 $randomOffset = rand(0, 100);
                 $simUrl = "https://api.jikan.moe/v4/anime?genres=$genreId&limit=6&order_by=score&sort=desc&page=$randomOffset";
            
@@ -67,7 +65,6 @@
                     $simData = json_decode($simRes, true)['data'];
         
                     foreach ($simData as $item) {
-                        // On exclut l'anime qu'on est déjà en train de regarder
                         if ($item['mal_id'] != $animeId && count($similarAnimes) < 6) {
                             $similarAnimes[] = $item;
                         }
