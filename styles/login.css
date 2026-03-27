@@ -6,7 +6,6 @@
   position: relative;
 }
 
-/* --- ===== FORM ======= --- */
 form {
   display: flex;
   flex-direction: column;
@@ -90,7 +89,6 @@ form span {
   transition: color 0.3s;
 }
 
-/* ===== BACKGROUND ======= */
 .background-image {
   flex: 2;
   position: relative;
@@ -110,7 +108,6 @@ form span {
   z-index: 1;
 }
 
-/* ===== MEDIA QUERIES ======= */
 @media (max-width: 768px) {
   .background-image {
     display: none;
