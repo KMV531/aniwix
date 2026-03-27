@@ -128,7 +128,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   const grid = document.getElementById("wishlistGrid");
   const emptyMessage = document.getElementById("emptyMessage");
 
-  // Après avoir récupéré tes IDs (myFavIds)
   if (myFavIds.length === 0) {
     emptyMessage.style.display = "block";
     grid.style.display = "none";

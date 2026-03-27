@@ -7,14 +7,11 @@
         $password = $_POST['password'];
 
         try {
-            // Step 1: On recupere l'email et on verifie s'il correspond à un compte
             $stmt = $pdo->prepare("SELECT * FROM users WHERE email = :email");
             $stmt->execute(['email' => $email]);
             $user = $stmt->fetch();
 
-            // 2. Étape de vérification séparée
             if (!$user) {
-                // L'email n'existe même pas en base
                 $_SESSION['error'] = "Cet email ne correspond à aucun compte Aniwix.";
                 header("Location: ../pages/login.php");
                 exit();
@@ -29,7 +26,6 @@
                 exit();
             }
 
-            // 3. Si on arrive ici, tout est parfait !
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
             $_SESSION['avatar'] = $user['avatar'];

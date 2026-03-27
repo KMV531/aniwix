@@ -43,7 +43,6 @@
                 exit();
             }
 
-            // 3. Insert in the database
             $sql = "INSERT INTO users (username, email, password, avatar) VALUES (:username, :email, :password, :avatar)";
             $stmt = $pdo->prepare($sql);
             $stmt->execute([
